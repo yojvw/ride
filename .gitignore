@@ -1,0 +1,13 @@
+# 数据文件太大（46MB），不上传 GitHub
+data/*.csv
+*.pkl
+*.pkl.gz
+
+# Python 运行产物
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# 系统文件
+Thumbs.db
+Desktop.ini
