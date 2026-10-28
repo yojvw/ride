@@ -10,7 +10,7 @@ import seaborn as sns
 
 
 # 路径以脚本所在目录为基准，避免启动位置影响数据读取。
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent  # 项目根目录（src 的上一级）
 DATA_PATH = BASE_DIR / 'output' / 'df_clean.pkl'
 FIGURE_DIR = BASE_DIR / 'figures'
 WEEKDAY_NAMES = ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
