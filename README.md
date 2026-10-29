@@ -36,17 +36,52 @@
 
 ## 运行方式
 
+在项目根目录执行（脚本会自行定位 `output/` 与 `figures/`）：
+
 ```
-py src/step0_eda_check.py
-py src/step1_clean.py
+py src/step0_eda_check.py          # 数据体检
+py src/step1_clean.py              # 清洗，产出 output/df_clean.pkl
+py src/step2_time_analysis.py      # 时间维度，fig01~fig04
+py src/step3_space_analysis.py     # 空间维度，fig05~fig07
+py src/step4_supply_demand.py      # 供需失衡，fig08~fig09 + 站点表
+py src/step5_demand_model.py       # 需求建模，fig10~fig11 + 指标表
 ```
+
+依赖：Python 3.14.6、pandas 3.0.6、numpy 2.5.1、matplotlib 3.11.2、seaborn 0.13.2、scikit-learn 1.9.1
 
 ## 目录结构
 
 ```
-├── data/        原始数据（csv 不上传）
-├── src/         分析脚本
-├── figures/     输出图表
-├── output/      中间结果（清洗后数据、指标表）
+├── data/        原始数据（csv 不上传，仅本地保留）
+├── src/         分析脚本（见下方两层说明）
+├── figures/     输出图表 fig01~fig11
+├── output/      中间结果（清洗后 pkl、指标表、站点供需表）
 └── report/      项目报告
 ```
+
+### src/ 的两层结构说明
+
+本项目采用「三人各自独立完成 → 汇总定稿」的协作方式，`src/` 因此分两层：
+
+| 位置 | 含义 | 说明 |
+|---|---|---|
+| `src/step0~step5*.py` | **最终汇总定稿** | 报告与汇报所引用的正式版本，图表与指标均由这一层产出 |
+| `src/member_a/` | 成员 A 的个人过程稿 | 独立完成的一整套脚本，保留用于核对与追溯 |
+| `src/member_b/` | 成员 B 的个人过程稿 | 同上 |
+| `src/member_c/` | 成员 C 的个人过程稿 | 同上 |
+
+> 目前 `src/member_a/` 的内容与汇总定稿一致，因为成员 A 是第一位完成全流程的成员；
+> 成员 B、C 的过程稿陆续提交后，汇总定稿将在三人结果交叉验证的基础上形成。
+> 这一设计使「谁在什么时候提交了什么」在提交历史中可以逐条追溯，与报告第 8 章的
+> 分工说明一一对应。
+
+## 协作约定
+
+1. 每位成员**只修改自己名下目录**（`src/member_x/`），不改动他人文件与根目录 `README.md`。
+2. 提交前先执行 `拉取源(Fetch)` → 如落后则 `拉取(Pull)`，再 `提交(Commit)` → `推送(Push)`。
+3. 每位成员首次克隆后须设置本机身份，否则提交记录的作者不正确：
+   ```
+   cd /d D:\bike
+   git config user.name "姓名"
+   git config user.email "GitHub 注册邮箱"
+   ```
