@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+results/
+demo/
+data/clean/*
+!data/clean/.gitkeep
+data/raw/
+demo_fresh*/
+.jupyter/
+.mplcache/

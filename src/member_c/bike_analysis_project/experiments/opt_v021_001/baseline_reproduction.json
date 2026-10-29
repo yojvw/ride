@@ -1,0 +1,7 @@
+{
+  "status": "validation_baseline_reproduced",
+  "max_absolute_prediction_delta": 1.7763568394002505e-15,
+  "n": 5760,
+  "reference_sha256": "a9d0220c276a5461870918a3b617e0dcd17ba0385a04ec88c3713c26a35b3032",
+  "test_recomputed": false
+}

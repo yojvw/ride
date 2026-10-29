@@ -1,0 +1,46 @@
+{
+  "rides_path": "../data/clean/rides.csv",
+  "coverage_path": "../data/clean/coverage.csv",
+  "stations_path": "../data/clean/stations.csv",
+  "output_dir": "../results/real_run_01",
+  "time_basis": "America/New_York local wall clock (US Eastern, EST/UTC-5), timezone-naive timestamps; no DST transition in January 2024",
+  "analysis_start": "2024-01-01",
+  "train_end": "2024-01-19",
+  "validation_end": "2024-01-25",
+  "analysis_end": "2024-02-01",
+  "allow_assumed_coverage": true,
+  "synthetic_demo": false,
+  "max_stations": 20,
+  "min_train_events": 50,
+  "rolling_folds": 2,
+  "rolling_validation_days": 2,
+  "max_iter": 80,
+  "min_training_rows": 100,
+  "prediction_intervals": true,
+  "seed": 42,
+  "simulation": {
+    "enabled": false,
+    "buffer": 2,
+    "distance_weight": 0.03,
+    "scenarios": [
+      {
+        "name": "low_inventory",
+        "capacity": 20,
+        "initial_fraction": 0.25,
+        "hourly_budget": 5
+      },
+      {
+        "name": "medium_inventory",
+        "capacity": 20,
+        "initial_fraction": 0.5,
+        "hourly_budget": 5
+      },
+      {
+        "name": "medium_inventory_more_budget",
+        "capacity": 20,
+        "initial_fraction": 0.5,
+        "hourly_budget": 10
+      }
+    ]
+  }
+}

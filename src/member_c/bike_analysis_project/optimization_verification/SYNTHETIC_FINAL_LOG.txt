@@ -1,0 +1,8 @@
+{
+  "final_directory": "/tmp/bike_opt_build_su7bzqx8/synthetic_verification/experiments/synthetic_v020/final_test",
+  "test_budget_used": 2,
+  "selected_before_test": {
+    "arrivals": "adaptive_longer",
+    "departures": "adaptive_longer"
+  }
+}

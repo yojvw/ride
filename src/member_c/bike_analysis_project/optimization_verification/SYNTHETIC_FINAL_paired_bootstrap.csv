@@ -1,0 +1,3 @@
+target,selected_model,mae_difference,ci_low,ci_high,day_blocks,bootstrap_repetitions,inference_scope
+arrivals,adaptive_longer,-0.020564557713088082,-0.04650959109463515,0.007697453456720489,7,200,paired_daily_blocks_descriptive_not_selection_adjusted
+departures,adaptive_longer,-0.038710039000444826,-0.06662612393480236,-0.008815537840903406,7,200,paired_daily_blocks_descriptive_not_selection_adjusted

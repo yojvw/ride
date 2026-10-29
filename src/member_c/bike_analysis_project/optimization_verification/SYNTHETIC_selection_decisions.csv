@@ -1,0 +1,13 @@
+target,model,relative_validation_gain,cv_ok,peak_ok,ci_ok,eligible
+arrivals,adaptive_longer,0.03409878173571357,True,True,True,True
+arrivals,adaptive_mae,0.005319758438711575,True,False,False,False
+arrivals,adaptive_poisson,-0.0034708426124570035,True,False,False,False
+arrivals,adaptive_recent,-0.035468480442711225,True,False,False,False
+arrivals,blend_mean_median,0.004419258811874105,True,False,False,False
+arrivals,hgb_full,0.0,True,True,False,False
+departures,adaptive_longer,0.03554731029951008,True,True,True,True
+departures,adaptive_mae,-0.019660376033523885,True,False,False,False
+departures,adaptive_poisson,-0.011883569853380793,True,True,False,False
+departures,adaptive_recent,-0.006262412908016213,True,True,False,False
+departures,blend_mean_median,-0.004865405548934554,True,False,False,False
+departures,hgb_full,0.0,True,True,False,False

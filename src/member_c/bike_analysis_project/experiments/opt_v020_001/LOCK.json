@@ -1,0 +1,213 @@
+{
+  "version": "0.2.0",
+  "run_id": "opt_v020_001",
+  "protocol": {
+    "run_id": "opt_v020_001",
+    "synthetic_demo": false,
+    "project_config": "configs/real_template.json",
+    "reference_predictions": "results/real_run_01/tables/predictions.csv",
+    "ledger_dir": "experiments",
+    "fixed_splits": {
+      "analysis_start": "2024-01-01",
+      "train_end": "2024-01-19",
+      "validation_end": "2024-01-25",
+      "analysis_end": "2024-02-01"
+    },
+    "expected_rows": {
+      "cv_1": 960,
+      "cv_2": 960,
+      "validation": 2880,
+      "test": 3360
+    },
+    "expected_input_sha256": {
+      "rides_path": "02f37c8f6788d0a105fadd3868b73ae11f1d39af30b9ed74be60d9c6194b27ef",
+      "coverage_path": "7f2c46f14e866fe1ba61b943db5888363836099e0ea8fcb7b877c5db47112c32",
+      "stations_path": "e59fa4f4d182d090cc87abfbdfe4fd67aab6d4a626d2d7f4300e25abaf161207"
+    },
+    "baseline_reproduction_tolerance": 1e-09,
+    "longer_max_iter": 160,
+    "bootstrap_repetitions": 2000,
+    "minimum_relative_gain": 0.0,
+    "cv_relative_tolerance": 0.02,
+    "require_negative_ci": true,
+    "require_peak_not_worse": true,
+    "test_evaluations_already_used": 1,
+    "maximum_total_test_evaluations": 3,
+    "final_prediction_intervals": true
+  },
+  "fingerprint": {
+    "inputs": {
+      "rides_path": "02f37c8f6788d0a105fadd3868b73ae11f1d39af30b9ed74be60d9c6194b27ef",
+      "coverage_path": "7f2c46f14e866fe1ba61b943db5888363836099e0ea8fcb7b877c5db47112c32",
+      "stations_path": "e59fa4f4d182d090cc87abfbdfe4fd67aab6d4a626d2d7f4300e25abaf161207"
+    },
+    "source": {
+      "optimization/app.py": "23f769d50130365f728e16310085f894b47460eaceea851592d24032be625d36",
+      "optimization/engine.py": "00b825d7c867a7b329adb7da76b7f8a13228676471a694affb0017736c5092bb",
+      "optimization/features.py": "4ce1de493cf5ab4fecd51e4d0bc41c0e55accdce9b8c2f5d106e2146eeeb71d0",
+      "optimization/metrics.py": "f2da37a0e3dbcd9f744396065fae5fc9a4775b9a0ad5ef8cdb8ef2473e670184",
+      "optimization/models.py": "73027da9b5519299be1776e621205477d78671b56f732b1f46ef18547c40ff95",
+      "optimization/state.py": "2f0f18d702c3b3e1ed6197c308946c9cdf996654c6ecd1db90ad343064eca046",
+      "optimization/__init__.py": "667d4a15b970b851e20d17510224670c14646cfb6d5a1e388ca6b9cc6da8bf41",
+      "host/io": "1ab799b49bf95a4ae3cee921fc75a0bb53179fe7ff490b61d3434cff2fc01e29",
+      "host/panel": "c060ac9b9fea0ada4da756f9c74e9984ff6a5d1a754b8d80c7051e8cb2a5cb38",
+      "host/forecast": "f6df750b71b7f2e8284176777c7ff482152c792a9bef5effe40d97b576293d18"
+    },
+    "packages": {
+      "numpy": "1.26.4",
+      "pandas": "2.2.3",
+      "scipy": "1.13.1",
+      "scikit-learn": "1.6.1",
+      "threadpoolctl": "3.6.0"
+    },
+    "host_config": {
+      "rides_path": "D:\\新建文件夹 (4)\\bike_analysis_project\\data\\clean\\rides.csv",
+      "coverage_path": "D:\\新建文件夹 (4)\\bike_analysis_project\\data\\clean\\coverage.csv",
+      "stations_path": "D:\\新建文件夹 (4)\\bike_analysis_project\\data\\clean\\stations.csv",
+      "output_dir": "D:\\新建文件夹 (4)\\bike_analysis_project\\results\\real_run_01",
+      "time_basis": "America/New_York local wall clock (US Eastern, EST/UTC-5), timezone-naive timestamps; no DST transition in January 2024",
+      "analysis_start": "2024-01-01 00:00:00",
+      "train_end": "2024-01-19 00:00:00",
+      "validation_end": "2024-01-25 00:00:00",
+      "analysis_end": "2024-02-01 00:00:00",
+      "allow_assumed_coverage": true,
+      "synthetic_demo": false,
+      "max_stations": 20,
+      "min_train_events": 50,
+      "rolling_folds": 2,
+      "rolling_validation_days": 2,
+      "max_iter": 80,
+      "min_training_rows": 100,
+      "prediction_intervals": true,
+      "seed": 42,
+      "simulation": {
+        "enabled": false,
+        "buffer": 2,
+        "distance_weight": 0.03,
+        "scenarios": [
+          {
+            "name": "low_inventory",
+            "capacity": 20,
+            "initial_fraction": 0.25,
+            "hourly_budget": 5
+          },
+          {
+            "name": "medium_inventory",
+            "capacity": 20,
+            "initial_fraction": 0.5,
+            "hourly_budget": 5
+          },
+          {
+            "name": "medium_inventory_more_budget",
+            "capacity": 20,
+            "initial_fraction": 0.5,
+            "hourly_budget": 10
+          }
+        ]
+      }
+    }
+  },
+  "chosen": {
+    "arrivals": "hgb_full",
+    "departures": "hgb_full"
+  },
+  "specs": [
+    {
+      "name": "hgb_full",
+      "features": "base",
+      "loss": "poisson",
+      "max_iter": 80
+    },
+    {
+      "name": "adaptive_poisson",
+      "features": "adaptive",
+      "loss": "poisson",
+      "max_iter": 80
+    },
+    {
+      "name": "adaptive_mae",
+      "features": "adaptive",
+      "loss": "absolute_error",
+      "max_iter": 80
+    },
+    {
+      "name": "adaptive_recent",
+      "features": "adaptive",
+      "loss": "poisson",
+      "max_iter": 80,
+      "half_life_hours": 72
+    },
+    {
+      "name": "adaptive_longer",
+      "features": "adaptive",
+      "loss": "poisson",
+      "max_iter": 160
+    },
+    {
+      "name": "blend_mean_median",
+      "kind": "blend",
+      "parts": [
+        "adaptive_poisson",
+        "adaptive_mae"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "baseline_columns": [
+    "hour",
+    "weekday",
+    "weekend",
+    "hour_sin",
+    "hour_cos",
+    "weekday_sin",
+    "weekday_cos",
+    "departures_lag_1",
+    "departures_lag_2",
+    "departures_lag_3",
+    "departures_lag_24",
+    "departures_lag_168",
+    "departures_mean_3",
+    "departures_mean_24",
+    "departures_std_24",
+    "arrivals_lag_1",
+    "arrivals_lag_2",
+    "arrivals_lag_3",
+    "arrivals_lag_24",
+    "arrivals_lag_168",
+    "arrivals_mean_3",
+    "arrivals_mean_24",
+    "arrivals_std_24"
+  ],
+  "extra_columns": [
+    "weekday_hour",
+    "departures_ewm_24",
+    "departures_ewm_72",
+    "departures_mean_168",
+    "departures_same_hour_mean_7d",
+    "departures_recent_ratio",
+    "departures_day_level_difference",
+    "departures_recent_trend",
+    "departures_lag1_minus_lag24",
+    "departures_zero_fraction_24",
+    "arrivals_ewm_24",
+    "arrivals_ewm_72",
+    "arrivals_mean_168",
+    "arrivals_same_hour_mean_7d",
+    "arrivals_recent_ratio",
+    "arrivals_day_level_difference",
+    "arrivals_recent_trend",
+    "arrivals_lag1_minus_lag24",
+    "arrivals_zero_fraction_24"
+  ],
+  "baseline_reproduction": {
+    "status": "validation_baseline_reproduced",
+    "max_absolute_prediction_delta": 1.7763568394002505e-15,
+    "n": 5760,
+    "reference_sha256": "a9d0220c276a5461870918a3b617e0dcd17ba0385a04ec88c3713c26a35b3032",
+    "test_recomputed": false
+  },
+  "test_status": "not_scored_during_tune"
+}

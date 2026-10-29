@@ -1,0 +1,14 @@
+[
+  {
+    "target": "departures",
+    "total_panel_rows": 2976,
+    "eligible_rows": 2304,
+    "excluded_rows": 672
+  },
+  {
+    "target": "arrivals",
+    "total_panel_rows": 2976,
+    "eligible_rows": 2304,
+    "excluded_rows": 672
+  }
+]

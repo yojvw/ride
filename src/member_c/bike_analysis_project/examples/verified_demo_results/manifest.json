@@ -1,0 +1,56 @@
+{
+  "config": {
+    "rides_path": "/home/user/bike_analysis_project/demo/rides.csv",
+    "coverage_path": "/home/user/bike_analysis_project/demo/coverage.csv",
+    "stations_path": "/home/user/bike_analysis_project/demo/stations.csv",
+    "output_dir": "/home/user/bike_analysis_project/demo/results",
+    "time_basis": "SYNTHETIC local clock; no real city or timezone claims",
+    "analysis_start": "2024-01-01 00:00:00",
+    "train_end": "2024-01-19 00:00:00",
+    "validation_end": "2024-01-29 00:00:00",
+    "analysis_end": "2024-02-01 00:00:00",
+    "allow_assumed_coverage": false,
+    "synthetic_demo": true,
+    "max_stations": 4,
+    "min_train_events": 10,
+    "rolling_folds": 2,
+    "rolling_validation_days": 2,
+    "max_iter": 35,
+    "min_training_rows": 50,
+    "prediction_intervals": true,
+    "seed": 42,
+    "simulation": {
+      "enabled": true,
+      "buffer": 2,
+      "distance_weight": 0.03,
+      "scenarios": [
+        {
+          "name": "synthetic_low_stock",
+          "capacity": 16,
+          "initial_fraction": 0.25,
+          "hourly_budget": 4
+        },
+        {
+          "name": "synthetic_medium_stock",
+          "capacity": 16,
+          "initial_fraction": 0.5,
+          "hourly_budget": 4
+        }
+      ]
+    }
+  },
+  "sha256": {
+    "rides_path": "d3c7748091546c86ae63138fd42586902623df255c68659dfdb28650de8c4572",
+    "coverage_path": "42b07511ad9469a14f870c865065730b1076b1b4c046e37281874b973ea80747",
+    "stations_path": "99e2a031d11831b37d5f8e043b189df472b23ff39aa921c138e30ecc3c4c71b7"
+  },
+  "python": "3.12.8",
+  "packages": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "scipy": "1.13.1",
+    "scikit-learn": "1.6.1",
+    "matplotlib": "3.10.3",
+    "threadpoolctl": "3.6.0"
+  }
+}

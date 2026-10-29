@@ -1,0 +1,8 @@
+{'synthetic_rows': 3405}
+{
+  "input_rows": 3405,
+  "stations": 4,
+  "prediction_rows": 14784,
+  "figures": 8,
+  "output_dir": "/home/user/bike_analysis_project/demo/results"
+}

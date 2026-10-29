@@ -1,0 +1,9 @@
+{
+  "run_id": "synthetic_v020",
+  "chosen": {
+    "arrivals": "adaptive_longer",
+    "departures": "adaptive_longer"
+  },
+  "test_scored": false,
+  "result_directory": "/tmp/bike_opt_build_su7bzqx8/synthetic_verification/experiments/synthetic_v020"
+}

@@ -1,0 +1,9 @@
+scenario,strategy,observed_requests,served_requests,unserved_requests,service_rate,full_return_events,moved_bikes,bike_km_proxy,external_in,external_out,final_in_transit,overflow_holding,initial_fleet,final_station_inventory,claim_scope
+synthetic_low_stock,no_dispatch,352,252,100,0.7159090909090909,0,0,0.0,0,0,0,0,16,16,scenario_replay_of_observed_requests_NOT_actual_unmet_demand
+synthetic_low_stock,historical_greedy,352,331,21,0.9403409090909091,0,123,212.9561498875281,0,0,0,0,16,16,scenario_replay_of_observed_requests_NOT_actual_unmet_demand
+synthetic_low_stock,model_greedy,352,330,22,0.9375,0,117,194.19977552595256,0,0,0,0,16,16,scenario_replay_of_observed_requests_NOT_actual_unmet_demand
+synthetic_low_stock,model_milp,352,329,23,0.9346590909090909,0,120,185.0043403002699,0,0,0,0,16,16,scenario_replay_of_observed_requests_NOT_actual_unmet_demand
+synthetic_medium_stock,no_dispatch,352,277,75,0.7869318181818182,14,0,0.0,0,0,0,14,32,18,scenario_replay_of_observed_requests_NOT_actual_unmet_demand
+synthetic_medium_stock,historical_greedy,352,343,9,0.9744318181818182,8,73,110.08827001379692,0,0,0,8,32,24,scenario_replay_of_observed_requests_NOT_actual_unmet_demand
+synthetic_medium_stock,model_greedy,352,344,8,0.9772727272727273,7,74,109.03940920494782,0,0,0,7,32,25,scenario_replay_of_observed_requests_NOT_actual_unmet_demand
+synthetic_medium_stock,model_milp,352,344,8,0.9772727272727273,6,72,104.59122304798632,0,0,0,6,32,26,scenario_replay_of_observed_requests_NOT_actual_unmet_demand

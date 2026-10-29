@@ -1,0 +1,5 @@
+﻿time,run_id,phase,status,details
+2026-10-29T09:54:02.610224+00:00,opt_v020_001,tune,started,validation/CV only
+2026-10-29T09:54:18.532788+00:00,opt_v020_001,tune,locked,"{""arrivals"": ""hgb_full"", ""departures"": ""hgb_full""}"
+2026-10-29T10:27:34.128646+00:00,opt_v021_001,ablation,started,8 pre-registered candidates; CV + validation only
+2026-10-29T10:27:43.754114+00:00,opt_v021_001,ablation,completed,"{""arrivals"": ""reg_leaf15_min30"", ""departures"": ""hgb_full""}"

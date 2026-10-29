@@ -1,0 +1,31 @@
+test_assumed_coverage_rejected_without_optin (test_boundaries.BoundaryTests.test_assumed_coverage_rejected_without_optin) ... ok
+test_bad_time_order_config (test_boundaries.BoundaryTests.test_bad_time_order_config) ... ok
+test_baseline_uses_train_only (test_boundaries.BoundaryTests.test_baseline_uses_train_only) ... ok
+test_duration_mismatch_rejected (test_boundaries.BoundaryTests.test_duration_mismatch_rejected) ... ok
+test_metrics_known_example (test_boundaries.BoundaryTests.test_metrics_known_example) ... ok
+test_non_hour_aligned_config_rejected (test_boundaries.BoundaryTests.test_non_hour_aligned_config_rejected) ... ok
+test_overlapping_coverage_rejected (test_boundaries.BoundaryTests.test_overlapping_coverage_rejected) ... ok
+test_overwrite_unmarked_folder_refused (test_boundaries.BoundaryTests.test_overwrite_unmarked_folder_refused) ... ok
+test_placeholder_timezone_config_rejected (test_boundaries.BoundaryTests.test_placeholder_timezone_config_rejected) ... ok
+test_station_leading_zeros_preserved (test_boundaries.BoundaryTests.test_station_leading_zeros_preserved) ... ok
+test_greedy_conserves_inventory (test_core.DispatchTests.test_greedy_conserves_inventory) ... ok
+test_milp_conserves_inventory (test_core.DispatchTests.test_milp_conserves_inventory) ... ok
+test_zero_budget (test_core.DispatchTests.test_zero_budget) ... ok
+test_duplicate_ids_rejected (test_core.InputTests.test_duplicate_ids_rejected) ... ok
+test_covered_no_events_is_zero (test_core.PanelTests.test_covered_no_events_is_zero) ... ok
+test_cross_hour_arrival (test_core.PanelTests.test_cross_hour_arrival) ... ok
+test_current_label_not_in_rolling_feature (test_core.PanelTests.test_current_label_not_in_rolling_feature) ... ok
+test_future_station_not_selected (test_core.PanelTests.test_future_station_not_selected) ... ok
+test_lag_cannot_cross_station (test_core.PanelTests.test_lag_cannot_cross_station) ... ok
+test_uncovered_is_nan (test_core.PanelTests.test_uncovered_is_nan) ... ok
+test_external_inflow_accounted (test_core.ReplayTests.test_external_inflow_accounted) ... ok
+test_external_outflow_accounted (test_core.ReplayTests.test_external_outflow_accounted) ... ok
+test_failed_departure_does_not_create_arrival (test_core.ReplayTests.test_failed_departure_does_not_create_arrival) ... ok
+test_full_return_enters_holding_pool (test_core.ReplayTests.test_full_return_enters_holding_pool) ... ok
+test_successful_trip_conserves_bikes (test_core.ReplayTests.test_successful_trip_conserves_bikes) ... ok
+test_synthetic_end_to_end (test_integration.IntegrationTest.test_synthetic_end_to_end) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 2.549s
+
+OK

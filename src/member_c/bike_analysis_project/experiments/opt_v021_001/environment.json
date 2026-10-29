@@ -1,0 +1,35 @@
+{
+  "python": "3.12.10",
+  "packages": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "scipy": "1.13.1",
+    "scikit-learn": "1.6.1",
+    "threadpoolctl": "3.6.0"
+  },
+  "inputs": {
+    "rides_path": "02f37c8f6788d0a105fadd3868b73ae11f1d39af30b9ed74be60d9c6194b27ef",
+    "coverage_path": "7f2c46f14e866fe1ba61b943db5888363836099e0ea8fcb7b877c5db47112c32",
+    "stations_path": "e59fa4f4d182d090cc87abfbdfe4fd67aab6d4a626d2d7f4300e25abaf161207"
+  },
+  "source": {
+    "optimization/app.py": "23f769d50130365f728e16310085f894b47460eaceea851592d24032be625d36",
+    "optimization/engine.py": "00b825d7c867a7b329adb7da76b7f8a13228676471a694affb0017736c5092bb",
+    "optimization/features.py": "4ce1de493cf5ab4fecd51e4d0bc41c0e55accdce9b8c2f5d106e2146eeeb71d0",
+    "optimization/metrics.py": "f2da37a0e3dbcd9f744396065fae5fc9a4775b9a0ad5ef8cdb8ef2473e670184",
+    "optimization/models.py": "73027da9b5519299be1776e621205477d78671b56f732b1f46ef18547c40ff95",
+    "optimization/state.py": "2f0f18d702c3b3e1ed6197c308946c9cdf996654c6ecd1db90ad343064eca046",
+    "optimization/__init__.py": "667d4a15b970b851e20d17510224670c14646cfb6d5a1e388ca6b9cc6da8bf41",
+    "host/io": "1ab799b49bf95a4ae3cee921fc75a0bb53179fe7ff490b61d3434cff2fc01e29",
+    "host/panel": "c060ac9b9fea0ada4da756f9c74e9984ff6a5d1a754b8d80c7051e8cb2a5cb38",
+    "host/forecast": "f6df750b71b7f2e8284176777c7ff482152c792a9bef5effe40d97b576293d18"
+  },
+  "rows": {
+    "cv_1/arrivals": 8640,
+    "cv_1/departures": 8640,
+    "cv_2/arrivals": 8640,
+    "cv_2/departures": 8640,
+    "validation/arrivals": 25920,
+    "validation/departures": 25920
+  }
+}

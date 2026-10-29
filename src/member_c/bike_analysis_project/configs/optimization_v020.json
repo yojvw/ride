@@ -1,0 +1,34 @@
+{
+  "run_id": "opt_v020_001",
+  "synthetic_demo": false,
+  "project_config": "configs/real_template.json",
+  "reference_predictions": "results/real_run_01/tables/predictions.csv",
+  "ledger_dir": "experiments",
+  "fixed_splits": {
+    "analysis_start": "2024-01-01",
+    "train_end": "2024-01-19",
+    "validation_end": "2024-01-25",
+    "analysis_end": "2024-02-01"
+  },
+  "expected_rows": {
+    "cv_1": 960,
+    "cv_2": 960,
+    "validation": 2880,
+    "test": 3360
+  },
+  "expected_input_sha256": {
+    "rides_path": "02f37c8f6788d0a105fadd3868b73ae11f1d39af30b9ed74be60d9c6194b27ef",
+    "coverage_path": "7f2c46f14e866fe1ba61b943db5888363836099e0ea8fcb7b877c5db47112c32",
+    "stations_path": "e59fa4f4d182d090cc87abfbdfe4fd67aab6d4a626d2d7f4300e25abaf161207"
+  },
+  "baseline_reproduction_tolerance": 1e-09,
+  "longer_max_iter": 160,
+  "bootstrap_repetitions": 2000,
+  "minimum_relative_gain": 0.0,
+  "cv_relative_tolerance": 0.02,
+  "require_negative_ci": true,
+  "require_peak_not_worse": true,
+  "test_evaluations_already_used": 1,
+  "maximum_total_test_evaluations": 3,
+  "final_prediction_intervals": true
+}

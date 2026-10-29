@@ -1,0 +1,29 @@
+test_current_target_does_not_change_features (test_optimization.FeatureTests.test_current_target_does_not_change_features) ... ok
+test_duplicate_keys_rejected (test_optimization.FeatureTests.test_duplicate_keys_rejected) ... ok
+test_future_values_do_not_change_past (test_optimization.FeatureTests.test_future_values_do_not_change_past) ... ok
+test_gap_not_reindexed_silently (test_optimization.FeatureTests.test_gap_not_reindexed_silently) ... ok
+test_mean168_available_at_hour168 (test_optimization.FeatureTests.test_mean168_available_at_hour168) ... ok
+test_no_cross_station_ewm (test_optimization.FeatureTests.test_no_cross_station_ewm) ... ok
+test_no_extra_warmup (test_optimization.FeatureTests.test_no_extra_warmup) ... ok
+test_original_feature_count_is_23 (test_optimization.FeatureTests.test_original_feature_count_is_23) ... ok
+test_uncovered_targets_not_filled (test_optimization.FeatureTests.test_uncovered_targets_not_filled) ... ok
+test_zero_fraction_respects_missing (test_optimization.FeatureTests.test_zero_fraction_respects_missing) ... ok
+test_tune_locks_without_test_scoring (test_optimization.IntegrationTests.test_tune_locks_without_test_scoring) ... ok
+test_actual_mismatch_rejected (test_optimization.MetricTests.test_actual_mismatch_rejected) ... ok
+test_bootstrap_constant_difference (test_optimization.MetricTests.test_bootstrap_constant_difference) ... ok
+test_bootstrap_reproducible (test_optimization.MetricTests.test_bootstrap_reproducible) ... ok
+test_duplicate_samples_rejected (test_optimization.MetricTests.test_duplicate_samples_rejected) ... ok
+test_mask_mismatch_rejected (test_optimization.MetricTests.test_mask_mismatch_rejected) ... ok
+test_poisson_metric_handles_zero_predictions (test_optimization.MetricTests.test_poisson_metric_handles_zero_predictions) ... ok
+test_selection_chooses_improvement (test_optimization.MetricTests.test_selection_chooses_improvement) ... ok
+test_selection_falls_back (test_optimization.MetricTests.test_selection_falls_back) ... ok
+test_budget_exhaustion (test_optimization.StateTests.test_budget_exhaustion) ... ok
+test_dataset_budget_mismatch_rejected (test_optimization.StateTests.test_dataset_budget_mismatch_rejected) ... ok
+test_finalize_requires_acknowledgement (test_optimization.StateTests.test_finalize_requires_acknowledgement) ... ok
+test_lock_tamper_rejected (test_optimization.StateTests.test_lock_tamper_rejected) ... ok
+test_repeat_test_reservation_rejected (test_optimization.StateTests.test_repeat_test_reservation_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 2.233s
+
+OK

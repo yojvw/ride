@@ -1,0 +1,167 @@
+{
+  "run_id": "opt_v021_001",
+  "protocol": {
+    "run_id": "opt_v021_001",
+    "synthetic_demo": false,
+    "project_config": "configs/real_template.json",
+    "reference_predictions": "results/real_run_01/tables/predictions.csv",
+    "ledger_dir": "experiments",
+    "fixed_splits": {
+      "analysis_start": "2024-01-01",
+      "train_end": "2024-01-19",
+      "validation_end": "2024-01-25",
+      "analysis_end": "2024-02-01"
+    },
+    "expected_rows": {
+      "cv_1": 960,
+      "cv_2": 960,
+      "validation": 2880
+    },
+    "expected_input_sha256": {
+      "rides_path": "02f37c8f6788d0a105fadd3868b73ae11f1d39af30b9ed74be60d9c6194b27ef",
+      "coverage_path": "7f2c46f14e866fe1ba61b943db5888363836099e0ea8fcb7b877c5db47112c32",
+      "stations_path": "e59fa4f4d182d090cc87abfbdfe4fd67aab6d4a626d2d7f4300e25abaf161207"
+    },
+    "baseline_reproduction_tolerance": 1e-09,
+    "baseline_max_iter": 80,
+    "bootstrap_repetitions": 2000,
+    "minimum_relative_gain": 0,
+    "cv_relative_tolerance": 0.02,
+    "require_negative_ci": true,
+    "require_peak_not_worse": true,
+    "seed": 42,
+    "candidates": [
+      {
+        "name": "feat_mean168",
+        "kind": "features",
+        "note": "base + departures/arrivals mean_168 only",
+        "add": [
+          "departures_mean_168",
+          "arrivals_mean_168"
+        ]
+      },
+      {
+        "name": "feat_ewm72",
+        "kind": "features",
+        "note": "base + departures/arrivals ewm_72 only",
+        "add": [
+          "departures_ewm_72",
+          "arrivals_ewm_72"
+        ]
+      },
+      {
+        "name": "feat_same_hour_7d",
+        "kind": "features",
+        "note": "base + departures/arrivals same_hour_mean_7d only",
+        "add": [
+          "departures_same_hour_mean_7d",
+          "arrivals_same_hour_mean_7d"
+        ]
+      },
+      {
+        "name": "reg_leaf8_min15",
+        "kind": "params",
+        "note": "base features, max_leaf_nodes=8, min_samples_leaf=15",
+        "params": {
+          "max_leaf_nodes": 8,
+          "min_samples_leaf": 15
+        }
+      },
+      {
+        "name": "reg_leaf15_min30",
+        "kind": "params",
+        "note": "base features, max_leaf_nodes=15, min_samples_leaf=30",
+        "params": {
+          "max_leaf_nodes": 15,
+          "min_samples_leaf": 30
+        }
+      },
+      {
+        "name": "reg_leaf8_min30",
+        "kind": "params",
+        "note": "base features, max_leaf_nodes=8, min_samples_leaf=30",
+        "params": {
+          "max_leaf_nodes": 8,
+          "min_samples_leaf": 30
+        }
+      },
+      {
+        "name": "online_ema_025",
+        "kind": "online",
+        "note": "base prediction + 0.25 * EWM(actual-base, halflife 24h), per station/target, clipped at 0",
+        "coefficient": 0.25,
+        "half_life_hours": 24
+      },
+      {
+        "name": "online_ema_050",
+        "kind": "online",
+        "note": "base prediction + 0.50 * EWM(actual-base, halflife 24h), per station/target, clipped at 0",
+        "coefficient": 0.5,
+        "half_life_hours": 24
+      }
+    ]
+  },
+  "folds": [
+    {
+      "split": "cv_1",
+      "start": "2024-01-15 00:00:00",
+      "end": "2024-01-17 00:00:00"
+    },
+    {
+      "split": "cv_2",
+      "start": "2024-01-17 00:00:00",
+      "end": "2024-01-19 00:00:00"
+    },
+    {
+      "split": "validation",
+      "start": "2024-01-19 00:00:00",
+      "end": "2024-01-25 00:00:00"
+    }
+  ],
+  "baseline_columns": [
+    "hour",
+    "weekday",
+    "weekend",
+    "hour_sin",
+    "hour_cos",
+    "weekday_sin",
+    "weekday_cos",
+    "departures_lag_1",
+    "departures_lag_2",
+    "departures_lag_3",
+    "departures_lag_24",
+    "departures_lag_168",
+    "departures_mean_3",
+    "departures_mean_24",
+    "departures_std_24",
+    "arrivals_lag_1",
+    "arrivals_lag_2",
+    "arrivals_lag_3",
+    "arrivals_lag_24",
+    "arrivals_lag_168",
+    "arrivals_mean_3",
+    "arrivals_mean_24",
+    "arrivals_std_24"
+  ],
+  "extra_feature_pool": [
+    "weekday_hour",
+    "departures_ewm_24",
+    "departures_ewm_72",
+    "departures_mean_168",
+    "departures_same_hour_mean_7d",
+    "departures_recent_ratio",
+    "departures_day_level_difference",
+    "departures_recent_trend",
+    "departures_lag1_minus_lag24",
+    "departures_zero_fraction_24",
+    "arrivals_ewm_24",
+    "arrivals_ewm_72",
+    "arrivals_mean_168",
+    "arrivals_same_hour_mean_7d",
+    "arrivals_recent_ratio",
+    "arrivals_day_level_difference",
+    "arrivals_recent_trend",
+    "arrivals_lag1_minus_lag24",
+    "arrivals_zero_fraction_24"
+  ]
+}

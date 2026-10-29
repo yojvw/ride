@@ -1,0 +1,11 @@
+{
+  "rows": 3405,
+  "date_start": "2024-01-01 00:07:00",
+  "date_end": "2024-01-31 23:59:00",
+  "missing_start_station": 0,
+  "missing_end_station": 0,
+  "coverage_rows": 4,
+  "assumed_coverage_rows": 0,
+  "time_basis": "SYNTHETIC local clock; no real city or timezone claims",
+  "synthetic_demo": true
+}

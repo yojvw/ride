@@ -1,0 +1,55 @@
+{
+  "package_version": "1.0.0",
+  "package_name": "Claude前端与课程成果交接包",
+  "project_label": "共享单车题目五：2024 年 1 月华盛顿特区站点小时需求与调度分析",
+  "project_root": "../..",
+  "data": {
+    "rides": "data/clean/rides.csv",
+    "coverage": "data/clean/coverage.csv",
+    "stations": "data/clean/stations.csv",
+    "cleaning_report": "data/clean/cleaning_report.json",
+    "panel": "results/real_run_01/tables/hourly_panel.csv",
+    "predictions": "results/real_run_01/tables/predictions.csv"
+  },
+  "expected": {
+    "rides_rows": 238699,
+    "rides_sha256": "02f37c8f6788d0a105fadd3868b73ae11f1d39af30b9ed74be60d9c6194b27ef"
+  },
+  "analysis": {
+    "start": "2024-01-01",
+    "end": "2024-02-01",
+    "train_end": "2024-01-19",
+    "validation_end": "2024-01-25"
+  },
+  "confirmed_model": {
+    "run_id": "real_run_01",
+    "model": "hgb_full",
+    "dir": "results/real_run_01",
+    "status": "test_evaluated",
+    "note": "测试期只评估过一次，模型在验证集上选定"
+  },
+  "experiments": [
+    {
+      "run_id": "opt_v020_001",
+      "dir": "experiments/opt_v020_001",
+      "kind": "package_tune",
+      "label": "v0.2.0 六条目（基线+5 变体）",
+      "chosen": {
+        "departures": "hgb_full",
+        "arrivals": "hgb_full"
+      }
+    },
+    {
+      "run_id": "opt_v021_001",
+      "dir": "experiments/opt_v021_001",
+      "kind": "ablation",
+      "label": "v0.2.1 九条目（基线+8 候选）",
+      "chosen": {
+        "departures": "hgb_full",
+        "arrivals": "reg_leaf15_min30"
+      }
+    }
+  ],
+  "representative_day": "2024-01-10",
+  "figure_dpi": 150
+}
