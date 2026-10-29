@@ -59,6 +59,14 @@ py src/step5_demand_model.py       # 需求建模，fig10~fig11 + 指标表
 └── report/      项目报告
 ```
 
+### 成员对照
+
+| 目录 | 成员 | GitHub |
+|---|---|---|
+| `src/member_a/` | 杨佳伟（组长） | yojvw |
+| `src/member_b/` | 张熙正 | panb6746-coder |
+| `src/member_c/` | 尹泽宇 | yinzeyu26-commits |
+
 ### src/ 的两层结构说明
 
 本项目采用「三人各自独立完成 → 汇总定稿」的协作方式，`src/` 因此分两层：
